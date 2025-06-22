@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Recommendations - Book Advisor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/information">Information</a></li>
+            <li><a href="/popular">Popular Books</a></li>
+            <li><a href="/recommend">Recommend</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>Collaborative Filtering Book Recommendations</h1>
+        <form method="POST">
+            <input type="text" name="book_name" placeholder="Enter a book name" required>
+            <button type="submit">Get Recommendations</button>
+        </form>
+
+        <!-- Display the closest match if found -->
+        {% if closest_match_name %}
+        <div class="closest-match">
+            <h2>Closest Match Found:</h2>
+            <p><strong>{{ closest_match_name }}</strong> (Score: {{ closest_match_score }})</p>
+        </div>
+        {% elif closest_match_name is none %}
+        <p>No close match found.</p>
+        {% endif %}
+
+        <!-- Display recommendations if available -->
+        {% if recommendations %}
+        <div class="book-list">
+            {% for book in recommendations %}
+                <div class="book">
+                    <img src="{{ book[2] }}" alt="{{ book[0] }}">
+                    <h3>{{ book[0] }}</h3>
+                    <p>by {{ book[1] }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        {% else %}
+            <p>No recommendations available.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

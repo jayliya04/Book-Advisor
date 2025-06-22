@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Books - Book Advisor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/information">Information</a></li>
+            <li><a href="/popular">Popular Books</a></li>
+            <li><a href="/recommend">Recommend</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>Top 50 Popular Books</h1>
+        <div class="book-list">
+            {% for book in books %}
+                <div class="book">
+                    <img src="{{ book['Image-URL-M'] }}" alt="{{ book['Book-Title'] }}">
+                    <h3>{{ book['Book-Title'] }}</h3>
+                    <p>by {{ book['Book-Author'] }}</p>
+                    <p>Rating: {{ book['Avg-Rating'] }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

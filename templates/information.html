@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information - Book Advisor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/information">Information</a></li>
+            <li><a href="/popular">Popular Books</a></li>
+            <li><a href="/recommend">Recommend</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>About Book Advisor</h1>
+        <p>This system recommends books to users based on two main methods:</p>
+        <ul>
+            <li><strong>Popularity-Based Recommender:</strong> This method recommends books based on their popularity, i.e., the most rated books.</li>
+            <li><strong>Collaborative Filtering:</strong> This method recommends books based on users' preferences. Books similar to the ones a user has liked in the past will be recommended.</li>
+        </ul>
+        <p>Explore the options to get personalized book recommendations!</p>
+    </div>
+</body>
+</html>
