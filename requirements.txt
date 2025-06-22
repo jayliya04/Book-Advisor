@@ -1,0 +1,6 @@
+Flask
+joblib
+numpy
+pandas
+fuzzywuzzy
+python-Levenshtein  # Needed for fuzzywuzzy to work efficiently
