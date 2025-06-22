@@ -5,10 +5,10 @@ import pandas as pd
 from fuzzywuzzy import process
 
 # Load pre-trained models and data
-popularity_df = joblib.load('popular')
-pt = joblib.load('pt')
-books = joblib.load('books')
-similarity_scores = joblib.load('similarity_scores')
+popularity_df = joblib.load('Book-Advisor/popular')
+pt = joblib.load('Book-Advisor/pt')
+books = joblib.load('Book-Advisor/books')
+similarity_scores = joblib.load('Book-Advisor/similarity_scores')
 
 app = Flask(__name__)
 
