@@ -3,12 +3,16 @@ This repository contains my 8th Semester Project, completed as part of my underg
 
 ---
 
-## 🚀 Features
+## Dataset
 
-- 🔥 **Popular Books Page**: Displays the top-rated books based on ratings and frequency.
-- 🧠 **Collaborative Filtering**: Recommends books based on user behavior and similar preferences.
-- 🎯 **Fuzzy Matching**: Accepts approximate book names for flexible searching.
-- 🧰 Flask-based web interface with routes like:
+- **Dataset link**: https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset
+
+## Features
+
+- **Popular Books Page**: Displays the top-rated books based on ratings and frequency.
+- **Collaborative Filtering**: Recommends books based on user behavior and similar preferences.
+- **Fuzzy Matching**: Accepts approximate book names for flexible searching.
+- Flask-based web interface with routes like:
   - `/` – Home
   - `/popular` – Popular books
   - `/recommend` – Personalized recommendations
@@ -17,19 +21,19 @@ This repository contains my 8th Semester Project, completed as part of my underg
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
-### 🧠 Machine Learning & Data Processing
+### Machine Learning & Data Processing
 - **Pandas** – data manipulation
 - **NumPy** – numerical operations
 - **Scikit-learn** – used for computing cosine similarity between books
 - **Joblib** – model and data serialization
 - **FuzzyWuzzy + python-Levenshtein** – approximate string matching for user input
 
-### 🌐 Web Framework
+### Web Framework
 - **Flask** – lightweight web server to serve the recommender UI
 - **Jinja2** – template engine for rendering HTML with Python data
 
-### 💻 Development Environment
+### Development Environment
 - **Jupyter Notebook** – for data analysis, preprocessing, and model creation
 - **HTML/CSS (via Flask templates)** – frontend for user interaction
